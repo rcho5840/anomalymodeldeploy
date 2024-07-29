@@ -9,7 +9,7 @@ import pickle
 app = Flask(__name__)
 TF_ENABLE_ONEDNN_OPTS=1
 
-with open('newcnn', 'rb') as f:
+with open('newcnn.pkl', 'rb') as f:
     newcnn = pickle.load(f)
 
 @app.route('/', methods=['GET'])
