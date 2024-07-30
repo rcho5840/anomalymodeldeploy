@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template, request
 import tensorflow as tf
 import numpy as np
@@ -8,7 +7,7 @@ import time
 import pickle
 
 app = Flask(__name__)
-TF_ENABLE_ONEDNN_OPTS=1
+TF_ENABLE_ONEDNN_OPTS=0
 
 with open('newcnn.pkl', 'rb') as f:
     newcnn = pickle.load(f)
