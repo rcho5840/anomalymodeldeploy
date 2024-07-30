@@ -17,7 +17,7 @@ def hello_word():
 @app.route('/', methods=['POST'])
 def predict():
     imagefile= request.files['imagefile']
-    image_path = "./images/" + imagefile.filename
+    image_path = "testimages/" + imagefile.filename
     imagefile.save(image_path)
 
     image = load_img(image_path, target_size=(224, 224))
