@@ -25,7 +25,7 @@ def predict():
     start_time = time.time()
 # Read Images
     imagefile= request.files['imagefile']
-    image_path = "C:/Users/randy/OneDrive/Desktop/anomalymodeldeploy/testimages/" + imagefile.filename
+    image_path = "testimages/" + imagefile.filename
     imagefile.save(image_path)
     image = load_img(image_path, target_size=(256, 256))
     image = tf.image.rgb_to_grayscale(image)
