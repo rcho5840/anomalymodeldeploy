@@ -41,7 +41,7 @@ def predict():
     end_time = time.time()
     inference_time = end_time - start_time
 
-    return render_template('index.html', prediction=yhat, inference_time = inference_time)
+    return render_template('index.html', prediction=classification, inference_time = inference_time)
 
 
 
